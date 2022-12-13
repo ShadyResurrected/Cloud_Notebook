@@ -6,7 +6,9 @@ mongoose.set("strictQuery", true);
 connectToMongo();
 
 const app = express();
-const port = 3000;
+const port = 5000;
+
+app.use(express.json()) // To get the request body we use this middleware
 
 // Available Routes
 app.use('/api/auth', require('./routes/auth'))
